@@ -1,5 +1,5 @@
-const crawlab = require('crawlab-sdk');
-const PCR = require('puppeteer-chromium-resolver');
+// const crawlab = require('crawlab-sdk');
+// const PCR = require('puppeteer-chromium-resolver');
 const puppeteer = require('puppeteer')
 console.log(puppeteer)
 return false
