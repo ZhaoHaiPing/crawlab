@@ -1,5 +1,8 @@
 const crawlab = require('crawlab-sdk');
 const PCR = require('puppeteer-chromium-resolver');
+const puppeteer = require('puppeteer')
+console.log(puppeteer)
+return false
 
 const crawlDetail = async (page, url) => {
 	await page.goto(url);
@@ -16,7 +19,7 @@ const crawlPage = async (page) => {
 	const items = await page.evaluate(() => {
 		const items = [];
 		document.querySelectorAll('.gl-item').forEach(el => {
-			items.push({ 
+			items.push({
 				title: el.querySelector('.p-name > a').getAttribute('title'),
 				url: 'https:' + el.querySelector('.p-name > a').getAttribute('href'),
 			});
